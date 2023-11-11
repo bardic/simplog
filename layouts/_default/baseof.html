@@ -4,6 +4,10 @@
 <head>
 	{{- partial "head.html" . -}}
 	<link rel="stylesheet" href="https://use.typekit.net/xjr1yeg.css" />
+	{{ with .OutputFormats.Get "rss" -}}
+		{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+	{{ end }}
+
 </head>
 
 <body {{ with .Site.Params.ColorTheme }}class="theme-{{.}}" {{end}}>
