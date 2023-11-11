@@ -1,0 +1,12 @@
+<li class="post-item">
+
+  <span>
+    <div class="post-title"><a href="{{.context.RelPermalink}}">{{.context.Title}}</a></div>
+    <div class="post-date sub">{{.context.Date.Format "2006-01-02"}}</div>
+  </span>
+  {{ if and (eq .context.Site.Params.Enabled.Summary true) (eq .isIndex true) }}
+  <div class="post-summary">
+    {{ .context.Summary }}
+  </div>
+  {{ end }}
+</li>
