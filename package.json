@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "css:scss": "node-sass static/scss -o static/css --output-style compressed",
-    "watch:scss": "watch 'npm run css:scss ' ./static/scss",
+    "css:scss": "node-sass ../../staticscss -o ../../staticcss --output-style compressed",
+    "watch:scss": "watch 'npm run css:scss ' ./../../staticscss",
     "test": "echo 'npm run test....'"
   },
   "repository": {
